@@ -1,0 +1,2170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete HTML Course</title>
+    <style>
+        /* Main styling */
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --warning: #e74c3c;
+            --code-bg: #2d2d2d;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        /* Headings */
+        h1, h2, h3, h4 {
+            color: var(--dark);
+            margin-top: 30px;
+        }
+        
+        h1 { border-bottom: 2px solid var(--primary); padding-bottom: 10px; }
+        h2 { border-left: 4px solid var(--primary); padding-left: 10px; }
+        h3 { color: var(--primary); }
+        
+        /* Navigation */
+        #toc {
+            background-color: white;
+            padding: 20px;
+            border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 0px;
+        }
+        
+        #toc ul {
+            columns: 3;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        #toc a {
+            color: var(--primary);
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        #toc a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Content sections */
+        .lesson {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Code examples */
+        .example-container {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--code-bg);
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre;
+            tab-size: 2;
+        }
+        
+        .code-comment {
+            color: #75715e;
+        }
+        
+        .tag {
+            color: #f92672;
+        }
+        
+        .attr {
+            color: #a6e22e;
+        }
+        
+        .value {
+            color: #e6db74;
+        }
+        
+        /* Live results */
+        .result {
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        /* Notes and warnings */
+        .note {
+            background-color: #fffde7;
+            border-left: 4px solid #ffd600;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background-color: #ffebee;
+            border-left: 4px solid var(--warning);
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        /* Exercises */
+        .exercise {
+            background-color: #e8f5e9;
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        /* Deprecated tags */
+        .deprecated {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            #toc ul {
+                columns: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Complete HTML Course</h1>
+        <p>A comprehensive guide from beginner to advanced concepts</p>
+    </header>
+
+    <!-- Table of Contents -->
+    <section id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#lesson1">1. HTML Basics</a></li>
+            <li><a href="#lesson2">2. Text Formatting</a></li>
+            <li><a href="#lesson3">3. Headings & Paragraphs</a></li>
+            <li><a href="#lesson4">4. Links & Anchors</a></li>
+            <li><a href="#lesson5">5. Lists</a></li>
+            <li><a href="#lesson6">6. Images & Media</a></li>
+            <li><a href="#lesson7">7. Tables</a></li>
+            <li><a href="#lesson8">8. Forms</a></li>
+            <li><a href="#lesson9">9. Semantic HTML</a></li>
+            <li><a href="#lesson10">10. Metadata</a></li>
+            <li><a href="#lesson11">11. Layout & Structure</a></li>
+            <li><a href="#lesson12">12. Embedded Content</a></li>
+            <li><a href="#lesson13">13. Deprecated Tags</a></li>
+            <li><a href="#lesson14">14. Forms Deep Dive</a></li>
+            <li><a href="#lesson15">15. Multimedia Advanced</a></li>
+            <li><a href="#lesson16">16. HTML APIs</a></li>
+             <li><a href="#lesson17">17. Accessibility (ARIA)</a></li>
+            <li><a href="#lesson18">18. Final Project</a></li>
+            <li><a href="#appendix">Appendix: Global Attributes</a></li>
+        </ul>
+    </section>
+
+    <!-- Lesson 1: HTML Basics -->
+    <section id="lesson1" class="lesson">
+        <h2>1. HTML Basics</h2>
+        
+        <h3>What is HTML?</h3>
+        <p>HTML (HyperText Markup Language) is the standard markup language for creating web pages.</p>
+        
+        <div class="example-container">
+            <h4>Basic HTML Document Structure</h4>
+            <div class="code">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"en"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"viewport"</span> <span class="attr">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="code-comment">&lt;!-- Content goes here --&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+            </div>
+            
+            <details>
+                <summary>Explanation</summary>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - Declares this as an HTML5 document</li>
+                    <li><code>&lt;html&gt;</code> - Root element of the HTML page</li>
+                    <li><code>&lt;head&gt;</code> - Contains meta information about the document</li>
+                    <li><code>&lt;meta charset="UTF-8"&gt;</code> - Defines character encoding</li>
+                    <li><code>&lt;title&gt;</code> - Specifies the title shown in browser tab</li>
+                    <li><code>&lt;body&gt;</code> - Contains the visible page content</li>
+                </ul>
+            </details>
+        </div>
+        
+        <div class="note">
+            <p><strong>Note:</strong> The <code>&lt;!DOCTYPE html&gt;</code> declaration must be the very first thing in your HTML document.</p>
+        </div>
+        
+        <div class="warning">
+            <p><strong>Warning:</strong> Some elements are empty (void) elements and don't have closing tags, like <code>&lt;img&gt;</code> and <code>&lt;br&gt;</code>.</p>
+        </div>
+        
+        <div class="exercise">
+            <h4>Exercise 1: Create Your First HTML Page</h4>
+            <p>Create a basic HTML page with a heading and paragraph.</p>
+            <button class="btn" onclick="toggleSolution('solution1')">View Solution</button>
+            
+            <div id="solution1" style="display: none; margin-top: 15px;">
+                <div class="code">
+<span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;title&gt;</span>My First Page<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Welcome to My Website<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;p&gt;</span>This is my first HTML page.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 2: Text Formatting -->
+    <section id="lesson2" class="lesson">
+        <h2>2. Text Formatting</h2>
+        
+        <p>HTML provides various tags for formatting text:</p>
+        
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><code>&lt;b&gt;</code></td>
+                <td>Bold text (without extra importance)</td>
+                <td><b>Bold text</b></td>
+            </tr>
+            <tr>
+                <td><code>&lt;strong&gt;</code></td>
+                <td>Important text (typically bold)</td>
+                <td><strong>Important text</strong></td>
+            </tr>
+            <tr>
+                <td><code>&lt;i&gt;</code></td>
+                <td>Italic text (without extra importance)</td>
+                <td><i>Italic text</i></td>
+            </tr>
+            <tr>
+                <td><code>&lt;em&gt;</code></td>
+                <td>Emphasized text (typically italic)</td>
+                <td><em>Emphasized text</em></td>
+            </tr>
+            <tr>
+                <td><code>&lt;u&gt;</code></td>
+                <td>Underlined text</td>
+                <td><u>Underlined text</u></td>
+            </tr>
+            <tr>
+                <td><code>&lt;mark&gt;</code></td>
+                <td>Marked/highlighted text</td>
+                <td><mark>Marked text</mark></td>
+            </tr>
+            <tr>
+                <td><code>&lt;small&gt;</code></td>
+                <td>Smaller text</td>
+                <td><small>Small text</small></td>
+            </tr>
+            <tr>
+                <td><code>&lt;del&gt;</code></td>
+                <td>Deleted text</td>
+                <td><del>Deleted text</del></td>
+            </tr>
+            <tr>
+                <td><code>&lt;ins&gt;</code></td>
+                <td>Inserted text</td>
+                <td><ins>Inserted text</ins></td>
+            </tr>
+            <tr>
+                <td><code>&lt;sub&gt;</code></td>
+                <td>Subscript text</td>
+                <td>H<sub>2</sub>O</td>
+            </tr>
+            <tr>
+                <td><code>&lt;sup&gt;</code></td>
+                <td>Superscript text</td>
+                <td>x<sup>2</sup></td>
+            </tr>
+            <tr>
+                <td><code>&lt;code&gt;</code></td>
+                <td>Computer code</td>
+                <td><code>print("Hello")</code></td>
+            </tr>
+            <tr>
+                <td><code>&lt;pre&gt;</code></td>
+                <td>Preformatted text (preserves spaces and line breaks)</td>
+                <td><pre>Preformatted
+    text</pre></td>
+            </tr>
+        </table>
+        
+        <div class="example-container">
+            <h4>Text Formatting Example</h4>
+            <div class="code">
+<span class="tag">&lt;p&gt;</span>
+    This is <span class="tag">&lt;b&gt;</span>bold<span class="tag">&lt;/b&gt;</span>, 
+    <span class="tag">&lt;strong&gt;</span>strong<span class="tag">&lt;/strong&gt;</span>, 
+    <span class="tag">&lt;i&gt;</span>italic<span class="tag">&lt;/i&gt;</span>, and 
+    <span class="tag">&lt;em&gt;</span>emphasized<span class="tag">&lt;/em&gt;</span> text.
+    Chemical formula: H<span class="tag">&lt;sub&gt;</span>2<span class="tag">&lt;/sub&gt;</span>O.
+    Math equation: x<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span> + y<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span> = z<span class="tag">&lt;sup&gt;</span>2<span class="tag">&lt;/sup&gt;</span>.
+<span class="tag">&lt;/p&gt;</span>
+            </div>
+            <div class="result">
+                <p>
+                    This is <b>bold</b>, <strong>strong</strong>, <i>italic</i>, and <em>emphasized</em> text.
+                    Chemical formula: H<sub>2</sub>O.
+                    Math equation: x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 3: Headings & Paragraphs -->
+    <section id="lesson3" class="lesson">
+        <h2>3. Headings & Paragraphs</h2>
+        
+        <h3>Headings</h3>
+        <p>HTML has six levels of headings from <code>&lt;h1&gt;</code> (most important) to <code>&lt;h6&gt;</code> (least important).</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;h1&gt;</span>Heading Level 1<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>Heading Level 2<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>Heading Level 3<span class="tag">&lt;/h3&gt;</span>
+<span class="tag">&lt;h4&gt;</span>Heading Level 4<span class="tag">&lt;/h4&gt;</span>
+<span class="tag">&lt;h5&gt;</span>Heading Level 5<span class="tag">&lt;/h5&gt;</span>
+<span class="tag">&lt;h6&gt;</span>Heading Level 6<span class="tag">&lt;/h6&gt;</span>
+            </div>
+            <div class="result">
+                <h1 style="margin: 5px 0;">Heading Level 1</h1>
+                <h2 style="margin: 5px 0;">Heading Level 2</h2>
+                <h3 style="margin: 5px 0;">Heading Level 3</h3>
+                <h4 style="margin: 5px 0;">Heading Level 4</h4>
+                <h5 style="margin: 5px 0;">Heading Level 5</h5>
+                <h6 style="margin: 5px 0;">Heading Level 6</h6>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p><strong>Best Practice:</strong> Use headings semantically to structure your content, not just for visual styling.</p>
+        </div>
+        
+        <h3>Paragraphs</h3>
+        <p>The <code>&lt;p&gt;</code> tag defines a paragraph.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;p&gt;</span>This is a paragraph. Paragraphs are separated by blank lines in the source code.<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;p&gt;</span>This is another paragraph. Browsers automatically add some margin before and after paragraphs.<span class="tag">&lt;/p&gt;</span>
+            </div>
+            <div class="result">
+                <p>This is a paragraph. Paragraphs are separated by blank lines in the source code.</p>
+                <p>This is another paragraph. Browsers automatically add some margin before and after paragraphs.</p>
+            </div>
+        </div>
+        
+        <h3>Line Breaks</h3>
+        <p>The <code>&lt;br&gt;</code> tag inserts a single line break.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;p&gt;</span>This is a line<span class="tag">&lt;br&gt;</span>broken into two.<span class="tag">&lt;/p&gt;</span>
+            </div>
+            <div class="result">
+                <p>This is a line<br>broken into two.</p>
+            </div>
+        </div>
+        
+        <h3>Horizontal Rule</h3>
+        <p>The <code>&lt;hr&gt;</code> tag defines a thematic break (horizontal rule).</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;p&gt;</span>First section<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;hr&gt;</span>
+<span class="tag">&lt;p&gt;</span>Second section<span class="tag">&lt;/p&gt;</span>
+            </div>
+            <div class="result">
+                <p>First section</p>
+                <hr>
+                <p>Second section</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 4: Links & Anchors -->
+    <section id="lesson4" class="lesson">
+        <h2>4. Links & Anchors</h2>
+        
+        <h3>The &lt;a&gt; Tag</h3>
+        <p>The <code>&lt;a&gt;</code> tag defines a hyperlink, which is used to link from one page to another.</p>
+        
+        <div class="example-container">
+            <h4>Basic Link Syntax</h4>
+            <div class="code">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"url"</span><span class="tag">&gt;</span>link text<span class="tag">&lt;/a&gt;</span>
+            </div>
+        </div>
+        
+        <h3>Link Types</h3>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="code-comment">&lt;!-- Absolute URL --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"https://www.example.com"</span><span class="tag">&gt;</span>Visit Example<span class="tag">&lt;/a&gt;</span>
+
+<span class="code-comment">&lt;!-- Relative URL --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"about.html"</span><span class="tag">&gt;</span>About Us<span class="tag">&lt;/a&gt;</span>
+
+<span class="code-comment">&lt;!-- Email link --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"mailto:someone@example.com"</span><span class="tag">&gt;</span>Send Email<span class="tag">&lt;/a&gt;</span>
+
+<span class="code-comment">&lt;!-- Phone link --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"tel:+1234567890"</span><span class="tag">&gt;</span>Call Us<span class="tag">&lt;/a&gt;</span>
+
+<span class="code-comment">&lt;!-- Link to page section --&gt;</span>
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#section2"</span><span class="tag">&gt;</span>Go to Section 2<span class="tag">&lt;/a&gt;</span>
+            </div>
+            <div class="result">
+                <p><a href="https://www.example.com" target="_blank">Visit Example</a></p>
+                <p><a href="#lesson4">About Us</a> (links back to this section)</p>
+                <p><a href="mailto:someone@example.com">Send Email</a></p>
+                <p><a href="tel:+1234567890">Call Us</a></p>
+            </div>
+        </div>
+        
+        <h3>Link Attributes</h3>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>href</code></td>
+                <td>Specifies the URL of the page the link goes to</td>
+            </tr>
+            <tr>
+                <td><code>target</code></td>
+                <td>Specifies where to open the linked document (_blank, _self, _parent, _top)</td>
+            </tr>
+            <tr>
+                <td><code>download</code></td>
+                <td>Specifies that the target will be downloaded when clicked</td>
+            </tr>
+            <tr>
+                <td><code>rel</code></td>
+                <td>Specifies the relationship between the current and linked document</td>
+            </tr>
+            <tr>
+                <td><code>title</code></td>
+                <td>Specifies extra information about the link (shown as tooltip)</td>
+            </tr>
+        </table>
+        
+        <div class="example-container">
+            <h4>Link with Attributes Example</h4>
+            <div class="code">
+<span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"https://www.example.com"</span> 
+   <span class="attr">target</span>=<span class="value">"_blank"</span> 
+   <span class="attr">rel</span>=<span class="value">"noopener noreferrer"</span>
+   <span class="attr">title</span>=<span class="value">"Visit Example Website"</span><span class="tag">&gt;</span>
+   Open Example in New Tab
+<span class="tag">&lt;/a&gt;</span>
+            </div>
+            <div class="result">
+                <p><a href="https://www.example.com" target="_blank" rel="noopener noreferrer" title="Visit Example Website">Open Example in New Tab</a></p>
+            </div>
+        </div>
+        
+        <div class="note">
+            <p><strong>Security Best Practice:</strong> When using <code>target="_blank"</code>, always include <code>rel="noopener noreferrer"</code> to prevent potential security vulnerabilities.</p>
+        </div>
+    </section>
+
+    <!-- Lesson 5: Lists -->
+    <section id="lesson5" class="lesson">
+        <h2>5. Lists</h2>
+        
+        <h3>Unordered Lists</h3>
+        <p>The <code>&lt;ul&gt;</code> tag defines an unordered (bulleted) list. Each item is defined with <code>&lt;li&gt;</code>.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Coffee<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Tea<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Milk<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+            </div>
+            <div class="result">
+                <ul>
+                    <li>Coffee</li>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h3>Ordered Lists</h3>
+        <p>The <code>&lt;ol&gt;</code> tag defines an ordered (numbered) list.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;ol&gt;</span>
+    <span class="tag">&lt;li&gt;</span>First item<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Second item<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Third item<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="code-comment">&lt;!-- With type attribute --&gt;</span>
+<span class="tag">&lt;ol</span> <span class="attr">type</span>=<span class="value">"A"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Item A<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Item B<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+
+<span class="code-comment">&lt;!-- With start attribute --&gt;</span>
+<span class="tag">&lt;ol</span> <span class="attr">start</span>=<span class="value">"50"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Item 50<span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Item 51<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ol&gt;</span>
+            </div>
+            <div class="result">
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ol>
+                <ol type="A" style="margin-top: 10px;">
+                    <li>Item A</li>
+                    <li>Item B</li>
+                </ol>
+                <ol start="50" style="margin-top: 10px;">
+                    <li>Item 50</li>
+                    <li>Item 51</li>
+                </ol>
+            </div>
+        </div>
+        
+        <h3>Description Lists</h3>
+        <p>The <code>&lt;dl&gt;</code> tag defines a description list, with <code>&lt;dt&gt;</code> for terms and <code>&lt;dd&gt;</code> for descriptions.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;dl&gt;</span>
+    <span class="tag">&lt;dt&gt;</span>Coffee<span class="tag">&lt;/dt&gt;</span>
+    <span class="tag">&lt;dd&gt;</span>- black hot drink<span class="tag">&lt;/dd&gt;</span>
+    <span class="tag">&lt;dt&gt;</span>Milk<span class="tag">&lt;/dt&gt;</span>
+    <span class="tag">&lt;dd&gt;</span>- white cold drink<span class="tag">&lt;/dd&gt;</span>
+<span class="tag">&lt;/dl&gt;</span>
+            </div>
+            <div class="result">
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>- black hot drink</dd>
+                    <dt>Milk</dt>
+                    <dd>- white cold drink</dd>
+                </dl>
+            </div>
+        </div>
+        
+        <h3>Nested Lists</h3>
+        <p>Lists can be nested inside other lists.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Beverages
+        <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Coffee<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Tea<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;li&gt;</span>Desserts
+        <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Cake<span class="tag">&lt;/li&gt;</span>
+            <span class="tag">&lt;li&gt;</span>Ice Cream<span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span>
+            </div>
+            <div class="result">
+                <ul>
+                    <li>Beverages
+                        <ul>
+                            <li>Coffee</li>
+                            <li>Tea</li>
+                        </ul>
+                    </li>
+                    <li>Desserts
+                        <ul>
+                            <li>Cake</li>
+                            <li>Ice Cream</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 6: Images & Media -->
+    <section id="lesson6" class="lesson">
+        <h2>6. Images & Media</h2>
+        
+        <h3>The &lt;img&gt; Tag</h3>
+        <p>The <code>&lt;img&gt;</code> tag is used to embed images in HTML pages.</p>
+        
+        <div class="example-container">
+            <h4>Basic Image Syntax</h4>
+            <div class="code">
+<span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"image.jpg"</span> <span class="attr">alt</span>=<span class="value">"Description of image"</span><span class="tag">&gt;</span>
+            </div>
+        </div>
+        
+        <h3>Image Attributes</h3>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>src</code></td>
+                <td>Specifies the path to the image</td>
+            </tr>
+            <tr>
+                <td><code>alt</code></td>
+                <td>Specifies an alternate text for the image</td>
+            </tr>
+            <tr>
+                <td><code>width</code></td>
+                <td>Specifies the width of the image</td>
+            </tr>
+            <tr>
+                <td><code>height</code></td>
+                <td>Specifies the height of the image</td>
+            </tr>
+            <tr>
+                <td><code>loading</code></td>
+                <td>Specifies whether to lazy load the image ("lazy" or "eager")</td>
+            </tr>
+            <tr>
+                <td><code>srcset</code></td>
+                <td>Specifies multiple image resources for different screen sizes</td>
+            </tr>
+            <tr>
+                <td><code>sizes</code></td>
+                <td>Specifies image sizes for different page layouts</td>
+            </tr>
+        </table>
+        
+        <div class="example-container">
+            <h4>Image with Attributes Example</h4>
+            <div class="code">
+<span class="tag">&lt;img</span> 
+    <span class="attr">src</span>=<span class="value">"https://via.placeholder.com/300"</span> 
+    <span class="attr">alt</span>=<span class="value">"Placeholder image"</span>
+    <span class="attr">width</span>=<span class="value">"300"</span>
+    <span class="attr">height</span>=<span class="value">"200"</span>
+    <span class="attr">loading</span>=<span class="value">"lazy"</span>
+<span class="tag">&gt;</span>
+            </div>
+            <div class="result">
+                <img src="https://via.placeholder.com/300" alt="Placeholder image" width="300" height="200" loading="lazy">
+            </div>
+        </div>
+        
+        <div class="note">
+            <p><strong>Best Practice:</strong> Always include the <code>alt</code> attribute for accessibility and SEO.</p>
+        </div>
+        
+        <h3>Audio</h3>
+        <p>The <code>&lt;audio&gt;</code> tag is used to embed sound content.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;audio</span> <span class="attr">controls</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="value">"audio.mp3"</span> <span class="attr">type</span>=<span class="value">"audio/mpeg"</span><span class="tag">&gt;</span>
+    Your browser does not support the audio element.
+<span class="tag">&lt;/audio&gt;</span>
+            </div>
+            <div class="result">
+                <audio controls>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+        
+        <h3>Video</h3>
+        <p>The <code>&lt;video&gt;</code> tag is used to embed video content.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;video</span> <span class="attr">width</span>=<span class="value">"320"</span> <span class="attr">height</span>=<span class="value">"240"</span> <span class="attr">controls</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="value">"movie.mp4"</span> <span class="attr">type</span>=<span class="value">"video/mp4"</span><span class="tag">&gt;</span>
+    Your browser does not support the video tag.
+<span class="tag">&lt;/video&gt;</span>
+            </div>
+            <div class="result">
+                <video width="320" height="240" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        
+        <h3>Audio/Video Attributes</h3>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>controls</code></td>
+                <td>Displays playback controls</td>
+            </tr>
+            <tr>
+                <td><code>autoplay</code></td>
+                <td>Starts playing automatically</td>
+            </tr>
+            <tr>
+                <td><code>loop</code></td>
+                <td>Loops the media when finished</td>
+            </tr>
+            <tr>
+                <td><code>muted</code></td>
+                <td>Mutes the audio output</td>
+            </tr>
+            <tr>
+                <td><code>preload</code></td>
+                <td>Specifies if and how the media should be loaded</td>
+            </tr>
+            <tr>
+                <td><code>poster</code></td>
+                <td>Image to show while video is downloading</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Lesson 7: Tables -->
+    <section id="lesson7" class="lesson">
+        <h2>7. Tables</h2>
+        
+        <h3>Basic Table Structure</h3>
+        <p>Tables are created with the <code>&lt;table&gt;</code> tag, rows with <code>&lt;tr&gt;</code>, headers with <code>&lt;th&gt;</code>, and data cells with <code>&lt;td&gt;</code>.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;table</span> <span class="attr">border</span>=<span class="value">"1"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;caption&gt;</span>Monthly Savings<span class="tag">&lt;/caption&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;th&gt;</span>Month<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;th&gt;</span>Savings<span class="tag">&lt;/th&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span>January<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span>$100<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;tr&gt;</span>
+        <span class="tag">&lt;td&gt;</span>February<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;td&gt;</span>$80<span class="tag">&lt;/td&gt;</span>
+    <span class="tag">&lt;/tr&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+            <div class="result">
+                <table border="1" style="width: 100%;">
+                    <caption>Monthly Savings</caption>
+                    <tr>
+                        <th>Month</th>
+                        <th>Savings</th>
+                    </tr>
+                    <tr>
+                        <td>January</td>
+                        <td>$100</td>
+                    </tr>
+                    <tr>
+                        <td>February</td>
+                        <td>$80</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <h3>Advanced Table Features</h3>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;table&gt;</span>
+    <span class="tag">&lt;thead&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th</span> <span class="attr">colspan</span>=<span class="value">"2"</span><span class="tag">&gt;</span>Name<span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th</span> <span class="attr">rowspan</span>=<span class="value">"2"</span><span class="tag">&gt;</span>Age<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;th&gt;</span>First<span class="tag">&lt;/th&gt;</span>
+            <span class="tag">&lt;th&gt;</span>Last<span class="tag">&lt;/th&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/thead&gt;</span>
+    <span class="tag">&lt;tbody&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td&gt;</span>John<span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span>Doe<span class="tag">&lt;/td&gt;</span>
+            <span class="tag">&lt;td&gt;</span>30<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tbody&gt;</span>
+    <span class="tag">&lt;tfoot&gt;</span>
+        <span class="tag">&lt;tr&gt;</span>
+            <span class="tag">&lt;td</span> <span class="attr">colspan</span>=<span class="value">"3"</span><span class="tag">&gt;</span>Footer content<span class="tag">&lt;/td&gt;</span>
+        <span class="tag">&lt;/tr&gt;</span>
+    <span class="tag">&lt;/tfoot&gt;</span>
+<span class="tag">&lt;/table&gt;</span>
+            </div>
+            <div class="result">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th colspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: center;">Name</th>
+                            <th rowspan="2" style="border: 1px solid #ddd; padding: 8px; text-align: center;">Age</th>
+                        </tr>
+                        <tr>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">First</th>
+                            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Last</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid #ddd; padding: 8px;">John</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">Doe</td>
+                            <td style="border: 1px solid #ddd; padding: 8px;">30</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" style="border: 1px solid #ddd; padding: 8px; text-align: center;">Footer content</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+        
+        <h3>Table Attributes</h3>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Applies To</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>border</code></td>
+                <td><code>&lt;table&gt;</code></td>
+                <td>Specifies whether the table has borders</td>
+            </tr>
+            <tr>
+                <td><code>colspan</code></td>
+                <td><code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></td>
+                <td>Number of columns a cell should span</td>
+            </tr>
+            <tr>
+                <td><code>rowspan</code></td>
+                <td><code>&lt;td&gt;</code>, <code>&lt;th&gt;</code></td>
+                <td>Number of rows a cell should span</td>
+            </tr>
+            <tr>
+                <td><code>scope</code></td>
+                <td><code>&lt;th&gt;</code></td>
+                <td>Specifies whether header is for column, row, or group</td>
+            </tr>
+            <tr>
+                <td><code>headers</code></td>
+                <td><code>&lt;td&gt;</code></td>
+                <td>Space-separated list of header cell IDs</td>
+            </tr>
+        </table>
+        
+        <div class="note">
+            <p><strong>Best Practice:</strong> For styling tables, use CSS instead of HTML attributes like <code>border</code>.</p>
+        </div>
+    </section>
+
+    <!-- Lesson 8: Forms -->
+    <section id="lesson8" class="lesson">
+        <h2>8. Forms</h2>
+        
+        <h3>Basic Form Structure</h3>
+        <p>The <code>&lt;form&gt;</code> element is used to create an HTML form for user input.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;form</span> <span class="attr">action</span>=<span class="value">"/submit"</span> <span class="attr">method</span>=<span class="value">"post"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"fname"</span><span class="tag">&gt;</span>First name:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"fname"</span> <span class="attr">name</span>=<span class="value">"fname"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+    
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"lname"</span><span class="tag">&gt;</span>Last name:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"lname"</span> <span class="attr">name</span>=<span class="value">"lname"</span><span class="tag">&gt;</span>
+    
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"submit"</span> <span class="attr">value</span>=<span class="value">"Submit"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </div>
+            <div class="result">
+                <form action="/submit" method="post" style="margin: 10px 0;">
+                    <label for="fname-demo">First name:</label>
+                    <input type="text" id="fname-demo" name="fname" required style="display: block; margin: 5px 0 10px;"><br>
+                    
+                    <label for="lname-demo">Last name:</label>
+                    <input type="text" id="lname-demo" name="lname" style="display: block; margin: 5px 0 10px;"><br>
+                    
+                    <input type="submit" value="Submit" style="margin-top: 10px;">
+                </form>
+            </div>
+        </div>
+        
+        <h3>Form Attributes</h3>
+        <table>
+            <tr>
+                <th>Attribute</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>action</code></td>
+                <td>Specifies where to send the form-data</td>
+            </tr>
+            <tr>
+                <td><code>method</code></td>
+                <td>Specifies the HTTP method (get or post)</td>
+            </tr>
+            <tr>
+                <td><code>target</code></td>
+                <td>Specifies where to display the response</td>
+            </tr>
+            <tr>
+                <td><code>autocomplete</code></td>
+                <td>Specifies whether autocomplete is on or off</td>
+            </tr>
+            <tr>
+                <td><code>novalidate</code></td>
+                <td>Specifies that the form should not be validated</td>
+            </tr>
+        </table>
+        
+        <h3>Input Types</h3>
+        <p>The <code>&lt;input&gt;</code> element is the most important form element, with many different types.</p>
+        
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td><code>text</code></td>
+                <td>Single-line text input</td>
+                <td><input type="text" placeholder="Enter text"></td>
+            </tr>
+            <tr>
+                <td><code>password</code></td>
+                <td>Password field (masked)</td>
+                <td><input type="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td><code>email</code></td>
+                <td>Email address field</td>
+                <td><input type="email" placeholder="email@example.com"></td>
+            </tr>
+            <tr>
+                <td><code>number</code></td>
+                <td>Numeric input</td>
+                <td><input type="number" placeholder="123"></td>
+            </tr>
+            <tr>
+                <td><code>tel</code></td>
+                <td>Telephone number</td>
+                <td><input type="tel" placeholder="123-456-7890"></td>
+            </tr>
+            <tr>
+                <td><code>url</code></td>
+                <td>URL input</td>
+                <td><input type="url" placeholder="https://example.com"></td>
+            </tr>
+            <tr>
+                <td><code>date</code></td>
+                <td>Date picker</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><code>time</code></td>
+                <td>Time input</td>
+                <td><input type="time"></td>
+            </tr>
+            <tr>
+                <td><code>datetime-local</code></td>
+                <td>Date and time input</td>
+                <td><input type="datetime-local"></td>
+            </tr>
+            <tr>
+                <td><code>month</code></td>
+                <td>Month and year picker</td>
+                <td><input type="month"></td>
+            </tr>
+            <tr>
+                <td><code>week</code></td>
+                <td>Week and year picker</td>
+                <td><input type="week"></td>
+            </tr>
+            <tr>
+                <td><code>color</code></td>
+                <td>Color picker</td>
+                <td><input type="color"></td>
+            </tr>
+            <tr>
+                <td><code>range</code></td>
+                <td>Slider control</td>
+                <td><input type="range"></td>
+            </tr>
+            <tr>
+                <td><code>file</code></td>
+                <td>File upload</td>
+                <td><input type="file"></td>
+            </tr>
+            <tr>
+                <td><code>checkbox</code></td>
+                <td>Checkbox</td>
+                <td><input type="checkbox"> Option</td>
+            </tr>
+            <tr>
+                <td><code>radio</code></td>
+                <td>Radio button</td>
+                <td><input type="radio" name="group"> Choice 1<br>
+                    <input type="radio" name="group"> Choice 2</td>
+            </tr>
+            <tr>
+                <td><code>hidden</code></td>
+                <td>Hidden input (not visible)</td>
+                <td><input type="hidden"></td>
+            </tr>
+            <tr>
+                <td><code>submit</code></td>
+                <td>Submit button</td>
+                <td><input type="submit" value="Submit"></td>
+            </tr>
+            <tr>
+                <td><code>reset</code></td>
+                <td>Reset button</td>
+                <td><input type="reset" value="Reset"></td>
+            </tr>
+            <tr>
+                <td><code>button</code></td>
+                <td>Clickable button</td>
+                <td><input type="button" value="Click"></td>
+            </tr>
+        </table>
+        
+        <h3>Other Form Elements</h3>
+        
+        <h4>Textarea</h4>
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;textarea</span> <span class="attr">id</span>=<span class="value">"message"</span> <span class="attr">name</span>=<span class="value">"message"</span> <span class="attr">rows</span>=<span class="value">"4"</span> <span class="attr">cols</span>=<span class="value">"50"</span><span class="tag">&gt;</span>
+Default text here...
+<span class="tag">&lt;/textarea&gt;</span>
+            </div>
+            <div class="result">
+                <textarea id="message-demo" name="message" rows="4" cols="50">
+Default text here...
+                </textarea>
+            </div>
+        </div>
+        
+        <h4>Select Dropdown</h4>
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;select</span> <span class="attr">id</span>=<span class="value">"cars"</span> <span class="attr">name</span>=<span class="value">"cars"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"volvo"</span><span class="tag">&gt;</span>Volvo<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"saab"</span><span class="tag">&gt;</span>Saab<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"mercedes"</span><span class="tag">&gt;</span>Mercedes<span class="tag">&lt;/option&gt;</span>
+    <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"audi"</span><span class="tag">&gt;</span>Audi<span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span>
+            </div>
+            <div class="result">
+                <select id="cars-demo" name="cars">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+        </div>
+        
+        <h4>Fieldset and Legend</h4>
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;fieldset&gt;</span>
+    <span class="tag">&lt;legend&gt;</span>Personal Info<span class="tag">&lt;/legend&gt;</span>
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"fname2"</span><span class="tag">&gt;</span>First name:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"fname2"</span> <span class="attr">name</span>=<span class="value">"fname2"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/fieldset&gt;</span>
+            </div>
+            <div class="result">
+                <fieldset>
+                    <legend>Personal Info</legend>
+                    <label for="fname2-demo">First name:</label>
+                    <input type="text" id="fname2-demo" name="fname2">
+                </fieldset>
+            </div>
+        </div>
+        
+        <h3>Form Validation</h3>
+        <p>HTML5 introduced built-in form validation:</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;form&gt;</span>
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"email"</span><span class="tag">&gt;</span>Email:<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"email"</span> <span class="attr">id</span>=<span class="value">"email"</span> <span class="attr">name</span>=<span class="value">"email"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+    
+    <span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"pwd"</span><span class="tag">&gt;</span>Password (min 8 chars):<span class="tag">&lt;/label&gt;</span>
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"password"</span> <span class="attr">id</span>=<span class="value">"pwd"</span> <span class="attr">name</span>=<span class="value">"pwd"</span> <span class="attr">minlength</span>=<span class="value">"8"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+    
+    <span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"submit"</span> <span class="attr">value</span>=<span class="value">"Submit"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/form&gt;</span>
+            </div>
+            <div class="result">
+                <form>
+                    <label for="email-demo">Email:</label>
+                    <input type="email" id="email-demo" name="email" required style="display: block; margin: 5px 0 10px;">
+                    
+                    <label for="pwd-demo">Password (min 8 chars):</label>
+                    <input type="password" id="pwd-demo" name="pwd" minlength="8" required style="display: block; margin: 5px 0 10px;">
+                    
+                    <input type="submit" value="Submit" style="margin-top: 10px;">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 9: Semantic HTML -->
+    <section id="lesson9" class="lesson">
+        <h2>9. Semantic HTML</h2>
+        
+        <p>Semantic HTML introduces meaning to the web page rather than just presentation.</p>
+        
+        <div class="example-container">
+            <h4>Semantic Page Layout Example</h4>
+            <div class="code">
+<span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Website Title<span class="tag">&lt;/h1&gt;</span>
+    <span class="tag">&lt;nav&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"/"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span>
+        <span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"/about"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/a&gt;</span>
+    <span class="tag">&lt;/nav&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+
+<span class="tag">&lt;main&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+        <span class="tag">&lt;h2&gt;</span>Article Title<span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Article content...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/article&gt;</span>
+    
+    <span class="tag">&lt;aside&gt;</span>
+        <span class="tag">&lt;h3&gt;</span>Related Links<span class="tag">&lt;/h3&gt;</span>
+        <span class="tag">&lt;ul&gt;</span>
+            <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>Link 1<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;/ul&gt;</span>
+    <span class="tag">&lt;/aside&gt;</span>
+<span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;footer&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Copyright © 2023<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/footer&gt;</span>
+            </div>
+        </div>
+        
+        <h3>Semantic Elements</h3>
+        <table>
+            <tr>
+                <th>Element</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>&lt;header&gt;</code></td>
+                <td>Introductory content or navigation</td>
+            </tr>
+            <tr>
+                <td><code>&lt;nav&gt;</code></td>
+                <td>Navigation links</td>
+            </tr>
+            <tr>
+                <td><code>&lt;main&gt;</code></td>
+                <td>Main content of the document</td>
+            </tr>
+            <tr>
+                <td><code>&lt;article&gt;</code></td>
+                <td>Self-contained composition</td>
+            </tr>
+            <tr>
+                <td><code>&lt;section&gt;</code></td>
+                <td>Thematic grouping of content</td>
+            </tr>
+            <tr>
+                <td><code>&lt;aside&gt;</code></td>
+                <td>Content indirectly related to main content</td>
+            </tr>
+            <tr>
+                <td><code>&lt;footer&gt;</code></td>
+                <td>Footer for its nearest section</td>
+            </tr>
+            <tr>
+                <td><code>&lt;figure&gt;</code></td>
+                <td>Self-contained content with caption</td>
+            </tr>
+            <tr>
+                <td><code>&lt;figcaption&gt;</code></td>
+                <td>Caption for a figure</td>
+            </tr>
+            <tr>
+                <td><code>&lt;time&gt;</code></td>
+                <td>Machine-readable date/time</td>
+            </tr>
+            <tr>
+                <td><code>&lt;mark&gt;</code></td>
+                <td>Highlighted text</td>
+            </tr>
+            <tr>
+                <td><code>&lt;details&gt;</code></td>
+                <td>Additional details that can be shown/hidden</td>
+            </tr>
+            <tr>
+                <td><code>&lt;summary&gt;</code></td>
+                <td>Visible heading for a details element</td>
+            </tr>
+        </table>
+        
+        <div class="note">
+            <p><strong>Benefits of Semantic HTML:</strong></p>
+            <ul>
+                <li>Better accessibility</li>
+                <li>Improved SEO</li>
+                <li>Easier to maintain</li>
+                <li>More meaningful structure</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Lesson 10: Metadata -->
+    <section id="lesson10" class="lesson">
+        <h2>10. Metadata</h2>
+        
+        <h3>The &lt;head&gt; Element</h3>
+        <p>The <code>&lt;head&gt;</code> element contains meta information about the HTML document.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;head&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"viewport"</span> <span class="attr">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"description"</span> <span class="attr">content</span>=<span class="value">"Free Web tutorials"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"keywords"</span> <span class="attr">content</span>=<span class="value">"HTML, CSS, JavaScript"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"author"</span> <span class="attr">content</span>=<span class="value">"John Doe"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;title&gt;</span>Document Title<span class="tag">&lt;/title&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> <span class="attr">href</span>=<span class="value">"styles.css"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"icon"</span> <span class="attr">href</span>=<span class="value">"favicon.ico"</span> <span class="attr">type</span>=<span class="value">"image/x-icon"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/head&gt;</span>
+            </div>
+        </div>
+        
+        <h3>Common Meta Tags</h3>
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td><code>&lt;meta charset="UTF-8"&gt;</code></td>
+                <td>Defines character encoding</td>
+            </tr>
+            <tr>
+                <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+                <td>Controls viewport for responsive design</td>
+            </tr>
+            <tr>
+                <td><code>&lt;meta name="description" content="..."&gt;</code></td>
+                <td>Provides a description for search engines</td>
+            </tr>
+            <tr>
+                <td><code>&lt;meta name="keywords" content="..."&gt;</code></td>
+                <td>Provides keywords for search engines</td>
+            </tr>
+            <tr>
+                <td><code>&lt;meta name="author" content="..."&gt;</code></td>
+                <td>Specifies the author of the document</td>
+            </tr>
+            <tr>
+                <td><code>&lt;meta http-equiv="refresh" content="30"&gt;</code></td>
+                <td>Refreshes the page every 30 seconds</td>
+            </tr>
+        </table>
+        
+        <h3>The &lt;link&gt; Tag</h3>
+        <p>The <code>&lt;link&gt;</code> tag defines the relationship between the current document and an external resource.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="code-comment">&lt;!-- Link to CSS file --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> <span class="attr">href</span>=<span class="value">"styles.css"</span><span class="tag">&gt;</span>
+
+<span class="code-comment">&lt;!-- Favicon --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"icon"</span> <span class="attr">href</span>=<span class="value">"favicon.ico"</span> <span class="attr">type</span>=<span class="value">"image/x-icon"</span><span class="tag">&gt;</span>
+
+<span class="code-comment">&lt;!-- Preload important resources --&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"preload"</span> <span class="attr">href</span>=<span class="value">"font.woff2"</span> <span class="attr">as</span>=<span class="value">"font"</span> <span class="attr">type</span>=<span class="value">"font/woff2"</span> <span class="attr">crossorigin</span><span class="tag">&gt;</span>
+            </div>
+        </div>
+        
+        <h3>The &lt;style&gt; Tag</h3>
+        <p>The <code>&lt;style&gt;</code> tag is used to define style information (CSS) for a document.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;style&gt;</span>
+    body {
+        background-color: lightblue;
+    }
+    h1 {
+        color: navy;
+        margin-left: 20px;
+    }
+<span class="tag">&lt;/style&gt;</span>
+            </div>
+        </div>
+        
+        <h3>The &lt;script&gt; Tag</h3>
+        <p>The <code>&lt;script&gt;</code> tag is used to embed or reference JavaScript code.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="code-comment">&lt;!-- Internal JavaScript --&gt;</span>
+<span class="tag">&lt;script&gt;</span>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+<span class="tag">&lt;/script&gt;</span>
+
+<span class="code-comment">&lt;!-- External JavaScript --&gt;</span>
+<span class="tag">&lt;script</span> <span class="attr">src</span>=<span class="value">"myscript.js"</span><span class="tag">&gt;&lt;/script&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 11: Layout & Structure -->
+    <section id="lesson11" class="lesson">
+        <h2>11. Layout & Structure</h2>
+        
+        <h3>The &lt;div&gt; Element</h3>
+        <p>The <code>&lt;div&gt;</code> tag defines a division or section in an HTML document, used as a container for other elements.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"container"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"header"</span><span class="tag">&gt;</span>Header<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"content"</span><span class="tag">&gt;</span>Main Content<span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"footer"</span><span class="tag">&gt;</span>Footer<span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+            </div>
+            <div class="result">
+                <div style="border: 1px solid #ddd; padding: 10px; margin: 10px 0;">
+                    <div style="background-color: #f2f2f2; padding: 10px; margin-bottom: 10px;">Header</div>
+                    <div style="padding: 10px; margin-bottom: 10px;">Main Content</div>
+                    <div style="background-color: #f2f2f2; padding: 10px;">Footer</div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>The &lt;span&gt; Element</h3>
+        <p>The <code>&lt;span&gt;</code> tag is an inline container used to mark up a part of a text, or a part of a document.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;p&gt;</span>My mother has <span class="tag">&lt;span</span> <span class="attr">style</span>=<span class="value">"color:blue"</span><span class="tag">&gt;</span>blue<span class="tag">&lt;/span&gt;</span> eyes.<span class="tag">&lt;/p&gt;</span>
+            </div>
+            <div class="result">
+                <p>My mother has <span style="color:blue">blue</span> eyes.</p>
+            </div>
+        </div>
+        
+        <h3>HTML5 Semantic Layout</h3>
+        <p>Modern HTML5 semantic elements provide better structure than generic <code>&lt;div&gt;</code> elements.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;header&gt;</span>
+    <span class="tag">&lt;h1&gt;</span>Page Title<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;/header&gt;</span>
+
+<span class="tag">&lt;nav&gt;</span>
+    <span class="tag">&lt;ul&gt;</span>
+        <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>Home<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+        <span class="tag">&lt;li&gt;</span><span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"#"</span><span class="tag">&gt;</span>About<span class="tag">&lt;/a&gt;</span><span class="tag">&lt;/li&gt;</span>
+    <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span>
+
+<span class="tag">&lt;main&gt;</span>
+    <span class="tag">&lt;article&gt;</span>
+        <span class="tag">&lt;h2&gt;</span>Article Title<span class="tag">&lt;/h2&gt;</span>
+        <span class="tag">&lt;p&gt;</span>Article content...<span class="tag">&lt;/p&gt;</span>
+    <span class="tag">&lt;/article&gt;</span>
+<span class="tag">&lt;/main&gt;</span>
+
+<span class="tag">&lt;footer&gt;</span>
+    <span class="tag">&lt;p&gt;</span>Copyright © 2023<span class="tag">&lt;/p&gt;</span>
+<span class="tag">&lt;/footer&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lesson 12: Embedded Content -->
+    <section id="lesson12" class="lesson">
+        <h2>12. Embedded Content</h2>
+        
+        <h3>The &lt;iframe&gt; Tag</h3>
+        <p>The <code>&lt;iframe&gt;</code> tag specifies an inline frame for embedding external content.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;iframe</span> 
+    <span class="attr">src</span>=<span class="value">"https://www.example.com"</span> 
+    <span class="attr">width</span>=<span class="value">"600"</span> 
+    <span class="attr">height</span>=<span class="value">"400"</span> 
+    <span class="attr">title</span>=<span class="value">"Example iframe"</span>
+    <span class="attr">frameborder</span>=<span class="value">"0"</span>
+<span class="tag">&gt;&lt;/iframe&gt;</span>
+            </div>
+            <div class="result">
+                <iframe src="https://www.example.com" width="100%" height="300" title="Example iframe" frameborder="0"> </iframe>
+            </div>
+        </div>
+        
+        <h3>The &lt;embed&gt; Tag</h3>
+        <p>The <code>&lt;embed&gt;</code> tag defines a container for an external resource.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;embed</span> 
+    <span class="attr">type</span>=<span class="value">"application/pdf"</span> 
+    <span class="attr">src</span>=<span class="value">"document.pdf"</span> 
+    <span class="attr">width</span>=<span class="value">"600"</span> 
+    <span class="attr">height</span>=<span class="value">"400"</span>
+<span class="tag">&gt;</span>
+            </div>
+        </div>
+        
+        <h3>The &lt;object&gt; Tag</h3>
+        <p>The <code>&lt;object&gt;</code> tag defines an embedded object within an HTML document.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;object</span> 
+    <span class="attr">data</span>=<span class="value">"movie.swf"</span> 
+    <span class="attr">width</span>=<span class="value">"400"</span> 
+    <span class="attr">height</span>=<span class="value">"300"</span>
+<span class="tag">&gt;&lt;/object&gt;</span>
+            </div>
+        </div>
+        
+        <h3>The &lt;picture&gt; Tag</h3>
+        <p>The <code>&lt;picture&gt;</code> tag gives more flexibility in specifying image resources.</p>
+        
+        <div class="example-container">
+            <div class="code">
+<span class="tag">&lt;picture&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">media</span>=<span class="value">"(min-width: 650px)"</span> <span class="attr">srcset</span>=<span class="value">"img_pink_flowers.jpg"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;source</span> <span class="attr">media</span>=<span class="value">"(min-width: 465px)"</span> <span class="attr">srcset</span>=<span class="value">"img_white_flower.jpg"</span><span class="tag">&gt;</span>
+    <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"img_orange_flowers.jpg"</span> <span class="attr">alt</span>=<span class="value">"Flowers"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/picture&gt;</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="lesson13" class="lesson">
+    <h2>13. Deprecated Tags</h2>
+    
+    <div class="warning">
+        <p><strong>Important:</strong> These tags should not be used in modern HTML5 development. They are included here for reference when maintaining older websites.</p>
+    </div>
+
+    <h3>Complete List of Deprecated Tags</h3>
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Former Use</th>
+            <th>Modern Alternative</th>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;acronym&gt;</code></td>
+            <td>Defining acronyms</td>
+            <td><code>&lt;abbr&gt;</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;applet&gt;</code></td>
+            <td>Embedding Java applets</td>
+            <td><code>&lt;object&gt;</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;basefont&gt;</code></td>
+            <td>Setting default font properties</td>
+            <td>CSS font properties</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;big&gt;</code></td>
+            <td>Making text larger</td>
+            <td>CSS <code>font-size</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;blink&gt;</code></td>
+            <td>Blinking text (Netscape only)</td>
+            <td>CSS animations</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;center&gt;</code></td>
+            <td>Centering content</td>
+            <td>CSS <code>text-align: center</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;dir&gt;</code></td>
+            <td>Directory listing</td>
+            <td><code>&lt;ul&gt;</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;font&gt;</code></td>
+            <td>Font styling</td>
+            <td>CSS font properties</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;frame&gt;</code></td>
+            <td>Defining frames</td>
+            <td><code>&lt;iframe&gt;</code> or CSS layout</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;frameset&gt;</code></td>
+            <td>Defining a set of frames</td>
+            <td>CSS layout</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;isindex&gt;</code></td>
+            <td>Single-line input prompt</td>
+            <td><code>&lt;input&gt;</code> elements</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;marquee&gt;</code></td>
+            <td>Scrolling text</td>
+            <td>CSS animations</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;nobr&gt;</code></td>
+            <td>Preventing line breaks</td>
+            <td>CSS <code>white-space: nowrap</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;noembed&gt;</code></td>
+            <td>Fallback for non-embed-supporting browsers</td>
+            <td><code>&lt;object&gt;</code> fallback content</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;plaintext&gt;</code></td>
+            <td>Displaying raw text</td>
+            <td><code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;spacer&gt;</code></td>
+            <td>Adding whitespace</td>
+            <td>CSS margins/padding</td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;strike&gt;</code></td>
+            <td>Strikethrough text</td>
+            <td><code>&lt;del&gt;</code> or CSS <code>text-decoration</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;tt&gt;</code></td>
+            <td>Teletype (monospace) text</td>
+            <td><code>&lt;code&gt;</code> or CSS <code>font-family</code></td>
+        </tr>
+        <tr>
+            <td class="deprecated"><code>&lt;xmp&gt;</code></td>
+            <td>Example text</td>
+            <td><code>&lt;pre&gt;</code> or <code>&lt;code&gt;</code></td>
+        </tr>
+    </table>
+
+    <div class="note">
+        <p><strong>Note:</strong> Some deprecated tags may still work in browsers for backward compatibility, but their use is strongly discouraged.</p>
+    </div>
+</section>
+<section id="lesson14" class="lesson">
+    <h2>14. HTML Entities and Special Characters</h2>
+    
+    <p>HTML entities are used to display reserved characters or characters that don't appear on your keyboard.</p>
+    
+    <h3>Why Use Entities?</h3>
+    <ul>
+        <li>Display characters that have special meaning in HTML (&lt; &gt; &amp;)</li>
+        <li>Show characters not available on your keyboard</li>
+        <li>Display invisible characters (non-breaking space)</li>
+        <li>Show characters that might not display correctly with the document's character encoding</li>
+    </ul>
+
+    <h3>Common HTML Entities</h3>
+    <table>
+        <tr>
+            <th>Character</th>
+            <th>Entity Name</th>
+            <th>Entity Number</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>&lt;</td>
+            <td><code>&amp;lt;</code></td>
+            <td><code>&amp;#60;</code></td>
+            <td>Less than</td>
+        </tr>
+        <tr>
+            <td>&gt;</td>
+            <td><code>&amp;gt;</code></td>
+            <td><code>&amp;#62;</code></td>
+            <td>Greater than</td>
+        </tr>
+        <tr>
+            <td>&amp;</td>
+            <td><code>&amp;amp;</code></td>
+            <td><code>&amp;#38;</code></td>
+            <td>Ampersand</td>
+        </tr>
+        <tr>
+            <td>&quot;</td>
+            <td><code>&amp;quot;</code></td>
+            <td><code>&amp;#34;</code></td>
+            <td>Double quotation mark</td>
+        </tr>
+        <tr>
+            <td>&apos;</td>
+            <td><code>&amp;apos;</code></td>
+            <td><code>&amp;#39;</code></td>
+            <td>Single quotation mark</td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><code>&amp;nbsp;</code></td>
+            <td><code>&amp;#160;</code></td>
+            <td>Non-breaking space</td>
+        </tr>
+        <tr>
+            <td>&copy;</td>
+            <td><code>&amp;copy;</code></td>
+            <td><code>&amp;#169;</code></td>
+            <td>Copyright symbol</td>
+        </tr>
+        <tr>
+            <td>&reg;</td>
+            <td><code>&amp;reg;</code></td>
+            <td><code>&amp;#174;</code></td>
+            <td>Registered trademark</td>
+        </tr>
+        <tr>
+            <td>&euro;</td>
+            <td><code>&amp;euro;</code></td>
+            <td><code>&amp;#8364;</code></td>
+            <td>Euro currency</td>
+        </tr>
+        <tr>
+            <td>&#9829;</td>
+            <td><code>&amp;hearts;</code></td>
+            <td><code>&amp;#9829;</code></td>
+            <td>Heart symbol</td>
+        </tr>
+    </table>
+
+    <div class="example-container">
+        <h4>Entity Usage Examples</h4>
+        <div class="code">
+&lt;p&gt;To display a &amp;lt;div&amp;gt; tag, you write &amp;amp;lt;div&amp;amp;gt;&lt;/p&gt;
+&lt;p&gt;Copyright &amp;copy; 2023 My Company&lt;/p&gt;
+&lt;p&gt;Price: 15&amp;euro; (fifteen euros)&lt;/p&gt;
+        </div>
+        <div class="result">
+            <p>To display a &lt;div&gt; tag, you write &amp;lt;div&amp;gt;</p>
+            <p>Copyright &copy; 2023 My Company</p>
+            <p>Price: 15&euro; (fifteen euros)</p>
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Tip:</strong> For a complete list of HTML entities, refer to the <a href="https://dev.w3.org/html5/html-author/charref" target="_blank">W3C HTML5 Character Reference</a>.</p>
+    </div>
+</section>
+<section id="lesson15" class="lesson">
+    <h2>15. HTML Comments</h2>
+    
+    <p>Comments are used to include notes in the code that are not displayed in the browser.</p>
+    
+    <h3>Comment Syntax</h3>
+    <div class="code">
+&lt;!-- This is a comment --&gt;
+    </div>
+
+    <h3>Uses of Comments</h3>
+    <ul>
+        <li>Explaining code functionality</li>
+        <li>Temporarily disabling code (commenting out)</li>
+        <li>Leaving notes for other developers</li>
+        <li>Creating documentation within code</li>
+    </ul>
+
+    <div class="example-container">
+        <h4>Comment Examples</h4>
+        <div class="code">
+&lt;!-- Main navigation starts here --&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;!-- Temporarily removing about link
+        &lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        --&gt;
+        &lt;li&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;!-- Main navigation ends here --&gt;
+        </div>
+        <div class="result">
+            <nav>
+                <ul>
+                    <li><a href="#lesson15">Home</a></li>
+                    <li><a href="#lesson15">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="warning">
+        <p><strong>Warning:</strong> Comments are visible in the page source, so don't include sensitive information in them.</p>
+    </div>
+
+    <h3>Conditional Comments (Deprecated)</h3>
+    <p>Previously used for Internet Explorer-specific code (no longer supported in IE10+):</p>
+    <div class="code">
+&lt;!--[if IE]&gt;
+    &lt;p&gt;This content is only visible in Internet Explorer&lt;/p&gt;
+&lt;![endif]--&gt;
+    </div>
+    <div class="note">
+        <p><strong>Modern Alternative:</strong> Use feature detection with JavaScript or CSS @supports instead of conditional comments.</p>
+    </div>
+</section>
+<section id="lesson16" class="lesson">
+    <h2>16. HTML5 APIs Overview</h2>
+    
+    <p>HTML5 introduced several JavaScript APIs that work with HTML elements to provide advanced functionality.</p>
+    
+    <h3>Major HTML5 APIs</h3>
+    <table>
+        <tr>
+            <th>API</th>
+            <th>Description</th>
+            <th>Example Usage</th>
+        </tr>
+        <tr>
+            <td>Geolocation</td>
+            <td>Gets the user's geographical position</td>
+            <td>Location-based services</td>
+        </tr>
+        <tr>
+            <td>Drag and Drop</td>
+            <td>Native drag-and-drop functionality</td>
+            <td>File uploaders, UI rearrangement</td>
+        </tr>
+        <tr>
+            <td>Web Storage</td>
+            <td>Stores data locally (localStorage, sessionStorage)</td>
+            <td>Remembering user preferences</td>
+        </tr>
+        <tr>
+            <td>Web Workers</td>
+            <td>Runs scripts in background threads</td>
+            <td>CPU-intensive tasks</td>
+        </tr>
+        <tr>
+            <td>WebSocket</td>
+            <td>Two-way communication with a server</td>
+            <td>Real-time applications</td>
+        </tr>
+        <tr>
+            <td>Canvas</td>
+            <td>Drawing graphics programmatically</td>
+            <td>Games, data visualization</td>
+        </tr>
+        <tr>
+            <td>SVG</td>
+            <td>Scalable Vector Graphics</td>
+            <td>Resolution-independent graphics</td>
+        </tr>
+        <tr>
+            <td>Web Audio</td>
+            <td>Advanced audio manipulation</td>
+            <td>Music applications, games</td>
+        </tr>
+        <tr>
+            <td>History</td>
+            <td>Manipulates browser history</td>
+            <td>Single-page applications</td>
+        </tr>
+    </table>
+
+    <div class="example-container">
+        <h4>Geolocation API Example</h4>
+        <div class="code">
+&lt;button onclick="getLocation()"&gt;Get Location&lt;/button&gt;
+&lt;p id="geo-demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        document.getElementById("geo-demo").innerHTML = 
+            "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    document.getElementById("geo-demo").innerHTML = 
+        "Latitude: " + position.coords.latitude + 
+        "&lt;br&gt;Longitude: " + position.coords.longitude;
+}
+&lt;/script&gt;
+        </div>
+        <div class="result">
+            <button onclick="getLocationDemo()">Get Location</button>
+            <p id="geo-demo"></p>
+            <script>
+            function getLocationDemo() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPositionDemo);
+                } else {
+                    document.getElementById("geo-demo").innerHTML = 
+                        "Geolocation is not supported by this browser.";
+                }
+            }
+            function showPositionDemo(position) {
+                document.getElementById("geo-demo").innerHTML = 
+                    "Latitude: " + position.coords.latitude + 
+                    "<br>Longitude: " + position.coords.longitude;
+            }
+            </script>
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Note:</strong> Many HTML5 APIs require user permission (like geolocation) or have specific security restrictions.</p>
+    </div>
+</section>
+<section id="lesson17" class="lesson">
+    <h2>17. HTML Validation and Best Practices</h2>
+    
+    <h3>HTML Validation</h3>
+    <p>Validating your HTML ensures it follows the official standards and helps avoid problems.</p>
+    
+    <h4>Ways to Validate HTML:</h4>
+    <ul>
+        <li><a href="https://validator.w3.org/" target="_blank">W3C Markup Validation Service</a></li>
+        <li>Browser developer tools</li>
+        <li>IDE/editor plugins</li>
+        <li>Build tools like HTMLHint</li>
+    </ul>
+
+    <h3>HTML Best Practices</h3>
+    <div class="example-container">
+        <h4>Do's and Don'ts</h4>
+        <table>
+            <tr>
+                <th>Best Practice</th>
+                <th>Why It's Important</th>
+            </tr>
+            <tr>
+                <td>Use proper document structure</td>
+                <td>Ensures browser compatibility and accessibility</td>
+            </tr>
+            <tr>
+                <td>Always include alt attributes for images</td>
+                <td>Accessibility and SEO benefits</td>
+            </tr>
+            <tr>
+                <td>Use semantic HTML5 elements</td>
+                <td>Better structure and meaning for content</td>
+            </tr>
+            <tr>
+                <td>Separate content (HTML), presentation (CSS), and behavior (JS)</td>
+                <td>Maintainable, scalable code</td>
+            </tr>
+            <tr>
+                <td>Validate your HTML regularly</td>
+                <td>Catches errors early</td>
+            </tr>
+            <tr>
+                <td>Use lowercase for tags and attributes</td>
+                <td>Consistency and XHTML compatibility</td>
+            </tr>
+            <tr>
+                <td>Quote all attribute values</td>
+                <td>Prevents parsing errors</td>
+            </tr>
+            <tr>
+                <td>Close all tags properly</td>
+                <td>Avoids rendering issues</td>
+            </tr>
+            <tr>
+                <td>Don't use deprecated elements</td>
+                <td>Future compatibility</td>
+            </tr>
+            <tr>
+                <td>Don't use tables for layout</td>
+                <td>Use CSS for layout instead</td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Accessibility Considerations</h3>
+    <ul>
+        <li>Use proper heading hierarchy (&lt;h1&gt; to &lt;h6&gt;)</li>
+        <li>Provide text alternatives for non-text content</li>
+        <li>Ensure sufficient color contrast</li>
+        <li>Use ARIA attributes when needed</li>
+        <li>Make interactive elements keyboard-navigable</li>
+    </ul>
+
+    <div class="exercise">
+        <h4>Exercise: Validate This Page</h4>
+        <p>Copy this page's HTML and validate it using the <a href="https://validator.w3.org/" target="_blank">W3C Validator</a>.</p>
+        <p>Fix any errors or warnings that appear.</p>
+    </div>
+</section>
+<section id="lesson18" class="lesson">
+    <h2>18. HTML5 New Input Types</h2>
+    
+    <p>HTML5 introduced several new input types for better form controls and validation.</p>
+    
+    <h3>New Input Types</h3>
+    <table>
+        <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td><code>color</code></td>
+            <td>Color picker</td>
+            <td><input type="color"></td>
+        </tr>
+        <tr>
+            <td><code>date</code></td>
+            <td>Date picker</td>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <td><code>datetime-local</code></td>
+            <td>Date and time without timezone</td>
+            <td><input type="datetime-local"></td>
+        </tr>
+        <tr>
+            <td><code>email</code></td>
+            <td>Email address field with validation</td>
+            <td><input type="email" placeholder="user@example.com"></td>
+        </tr>
+        <tr>
+            <td><code>month</code></td>
+            <td>Month and year picker</td>
+            <td><input type="month"></td>
+        </tr>
+        <tr>
+            <td><code>number</code></td>
+            <td>Numeric input field</td>
+            <td><input type="number" min="1" max="10"></td>
+        </tr>
+        <tr>
+            <td><code>range</code></td>
+            <td>Slider control</td>
+            <td><input type="range" min="0" max="100"></td>
+        </tr>
+        <tr>
+            <td><code>search</code></td>
+            <td>Search field (may have clear button)</td>
+            <td><input type="search" placeholder="Search..."></td>
+        </tr>
+        <tr>
+            <td><code>tel</code></td>
+            <td>Telephone number field</td>
+            <td><input type="tel" placeholder="123-456-7890"></td>
+        </tr>
+        <tr>
+            <td><code>time</code></td>
+            <td>Time input</td>
+            <td><input type="time"></td>
+        </tr>
+        <tr>
+            <td><code>url</code></td>
+            <td>URL field with validation</td>
+            <td><input type="url" placeholder="https://example.com"></td>
+        </tr>
+        <tr>
+            <td><code>week</code></td>
+            <td>Week and year picker</td>
+            <td><input type="week"></td>
+        </tr>
+    </table>
+
+    <div class="example-container">
+        <h4>Usage Example</h4>
+        <div class="code">
+&lt;form&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="birthdate"&gt;Birthdate:&lt;/label&gt;
+    &lt;input type="date" id="birthdate" name="birthdate"&gt;
+    
+    &lt;label for="volume"&gt;Volume:&lt;/label&gt;
+    &lt;input type="range" id="volume" name="volume" min="0" max="100"&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+        </div>
+        <div class="result">
+            <form style="margin: 10px 0;">
+                <label for="email-demo" style="display: block; margin-top: 10px;">Email:</label>
+                <input type="email" id="email-demo" name="email" required style="display: block; margin-bottom: 10px;">
+                
+                <label for="birthdate-demo" style="display: block;">Birthdate:</label>
+                <input type="date" id="birthdate-demo" name="birthdate" style="display: block; margin-bottom: 10px;">
+                
+                <label for="volume-demo" style="display: block;">Volume:</label>
+                <input type="range" id="volume-demo" name="volume" min="0" max="100" style="display: block; margin-bottom: 10px; width: 100%;">
+                
+                <input type="submit" value="Submit" style="margin-top: 10px;">
+            </form>
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Browser Support:</strong> While most modern browsers support these input types, their appearance and behavior may vary. Always test across browsers and provide fallbacks when needed.</p>
+    </div>
+</section>
+<section id="completion" class="lesson">
+    <h2>Congratulations on Completing the HTML Course!</h2>
+    
+    <div class="note" style="background-color: #e8f5e9;">
+        <p>You've now learned all the essential HTML concepts from basic to advanced levels.</p>
+    </div>
+
+    <h3>Next Steps</h3>
+    <ol>
+        <li><strong>Practice:</strong> Build small projects to reinforce what you've learned</li>
+        <li><strong>Learn CSS:</strong> Style your HTML documents</li>
+        <li><strong>Learn JavaScript:</strong> Add interactivity to your pages</li>
+        <li><strong>Explore Frameworks:</strong> Look into Bootstrap, React, or Vue.js</li>
+        <li><strong>Build a Portfolio:</strong> Showcase your projects</li>
+    </ol>
+
+    <h3>Additional Resources</h3>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML Documentation</a></li>
+        <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard</a></li>
+        <li><a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a></li>
+        <li><a href="https://web.dev/learn/html/" target="_blank">web.dev HTML Course</a></li>
+    </ul>
+
+    <div class="exercise">
+        <h4>Final Project</h4>
+        <p>Create a complete website using all the HTML concepts you've learned:</p>
+        <ul>
+            <li>Proper document structure</li>
+            <li>Semantic HTML5 elements</li>
+            <li>Forms with various input types</li>
+            <li>Images and multimedia</li>
+            <li>Tables for tabular data</li>
+            <li>Accessibility features</li>
+        </ul>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <p style="font-size: 1.2em;">Happy coding! 🎉</p>
+    </div>
+</section>
